@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+// import "./App.css";
 
-function App() {
+// export default function App() {
+// const names=["Cristiano Ronaldo","Gareth Bale","karim Benzema"]
+
+//   return (
+//     <div className="App">
+
+//   {names.map((nm)=> <Azure name={nm}/>)}
+//     </div>
+//   );
+// }
+// function Azure({ name}) {
+//   return (
+//     <div>
+//        <h1>Welcome {name}</h1>
+//     </div>
+//   );
+// }
+import "./App.css";
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Azure name="Cristiano Ronaldo" img="../img/cr7.jpg" />
+      <Azure name="Gareth Bale" img="../img/bale.jpg" />
+      <Azure name="karim Benzema" img="../img/benzema.jpg" />
     </div>
   );
 }
+function Azure({ name, img }) {
+  return (
+    <div>
+      <img src={img} id="cr7" alt="football" />
 
-export default App;
+      <h1>Welcome {name}</h1>
+    </div>
+  );
+}
