@@ -1,9 +1,22 @@
 .App {
-  font-family: 'Comforter', cursive;
+  font-family: 'Franklin Gothic Medium';
+  background-color: rgb(26, 24, 24);
+  color: whitesmoke;
+}
+.main{
   text-align: center;
 }
-#cr7 {
+
+.cr7 {
   object-fit: cover;
-  width: 300px;
-  height:200px;
+  width: 450px;
+  height:750px;
+  border-radius: 20px;
+}
+
+button{
+  height: auto;
+  width: 25%;
+  border-radius: 50px;
+  
 }
