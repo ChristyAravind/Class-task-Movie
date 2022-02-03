@@ -1,54 +1,108 @@
-
-import { useState } from "react";
-import "./App.css";
+import './App.css';
 
 export default function App() {
+
   return (
-    <div className="App">
-      <Azure name=" Shawshank Redemption" star=" Tim Robbins, Morgan Freeman, Bob Gunton" dir=" Frank Darabont" summary=" Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency." rating=" 9.3/10" img="https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg" />
-      <Azure name=" The Dark Knight" star=" Christian Bale, Heath Ledger, Aaron Eckhart" dir=" Christopher Nolan" summary=" When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice." rating=" 9.0/10" img="https://m.media-amazon.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_FMjpg_UX1000_.jpg" />
-      <Azure name=" Forrest Gump" star=" Tom Hanks, Robin Wright, Gary Sinise" dir=" Robert Zemeckis" summary=" The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart."  rating=" 8.7/10" img="https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg" />
-      <Azure name=" The Departed" star=" Leonardo DiCaprio ,Matt Damon, Jack Nicholson" dir=" Martin Scorsese"  summary=" An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston." rating=" 8.5/10" img="https://m.media-amazon.com/images/M/MV5BMTI1MTY2OTIxNV5BMl5BanBnXkFtZTYwNjQ4NjY3._V1_FMjpg_UX1000_.jpg" />
-      <Azure name=" The Green Mile" star=" Tom Hanks ,Michael Clarke Duncan, David Morse" dir=" Frank Darabont" summary=" The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift." rating=" 8.5/10" img="https://m.media-amazon.com/images/M/MV5BMTUxMzQyNjA5MF5BMl5BanBnXkFtZTYwOTU2NTY3._V1_FMjpg_UX1000_.jpg" />
+<section class="pricing py-5">
+  <div class="container">
+    <div class="row">
+      <Con1 />
+      <Con2 />
+      <Con3 />
     </div>
+  </div>
+</section>
   );
 }
-function Azure({ name,img,rating,summary,dir,star,}) {
-  return (
-    <div class="main">
-      <img src={img} class="cr7" alt="movie poster" />
-      <h1 >Movie : {name}</h1>
-      <h1 >Director : {dir}</h1>
-      <h2>IMDB Rating :{rating}</h2>
-      <h2>Movie Summary :{summary}</h2>
-      <h2>Stars :{star}</h2>
-      <h1><Count/><Rcount/></h1>
 
+function Con1(){
+      
+    return (
+      <div class="col-lg-4">
+      <div class="card mb-5 mb-lg-0">
+        <div class="card-body">
+          <h5 class="card-title text-muted text-uppercase text-center">Free</h5>
+          <h6 class="card-price text-center">$0<span class="period">/month</span></h6>
+        
+          <ul class="fa-ul">
+            <li><span class="fa-li"><i class="fas fa-check"></i></span>Single User</li>
+            <li><span class="fa-li"><i class="fas fa-check"></i></span>5GB Storage</li>
+            <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
+            <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+            <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Unlimited
+              Private Projects</li>
+            <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Dedicated
+              Phone Support</li>
+            <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Subdomain
+            </li>
+            <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status
+              Reports</li>
+          </ul>
+          <div class="d-grid">
+            <a href="#" class="btn btn-primary text-uppercase">Button</a>
+          </div>
+        </div>
+      </div>
     </div>
-  
-  );
+    )
 }
-function Count(){
 
-  const[like,setlike]=useState(0);
+function Con2(){
 
-  return(
-
-    <div>
-      <button class="btn btn-light" onClick={()=>setlike(like+1)}>👍{like}</button>
-    </div>
-  )
-
+       return (
+        <div class="col-lg-4">
+        <div class="card mb-5 mb-lg-0">
+          <div class="card-body">
+            <h5 class="card-title text-muted text-uppercase text-center">Plus</h5>
+            <h6 class="card-price text-center">$9<span class="period">/month</span></h6>
+          
+            <ul class="fa-ul">
+              <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>5 Users</strong></li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>50GB Storage</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Private Projects</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated Phone Support</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Subdomain</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status
+                Reports</li>
+            </ul>
+            <div class="d-grid">
+              <a href="#" class="btn btn-primary text-uppercase">Button</a>
+            </div>
+          </div>
+        </div>
+      </div>
+       )
 }
-function Rcount(){
 
-  const[dislike,setdislike]=useState(0);
+function Con3(){
+           
+         return(
+          <div class="col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
+              <h6 class="card-price text-center">$49<span class="period">/month</span></h6>
+              
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited Users</strong>
+                </li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>150GB Storage</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Private Projects</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated Phone Support</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited</strong> Free
+                  Subdomains</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Monthly Status Reports</li>
+              </ul>
+              <div class="d-grid">
+                <a href="#" class="btn btn-primary text-uppercase">Button</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  return(
-
-    <div>
-      <button class="btn btn-light" onClick={()=>setdislike(dislike+1)}>👎{dislike}</button>
-    </div>
-  )
-
+         )
 }
